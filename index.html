@@ -298,7 +298,7 @@ const NAK_IMAGES = {
     "Svati":"微信图片_20260717181815_1101_253.jpg",
     "Vishakha":"微信图片_20260717181815_1100_253.jpg",
     "Chitra":"微信图片_20260717181815_1099_253.jpg",
-    "Purva Bhadrapada":"微信图片_20260723001141_1137_253.jpg",
+    "Purva Bhadrapada":"微信图片_20260723001141_1137_253.png",
     "Uttara Bhadrapada":"屏幕截图2026.07.23.png"
 };
 
@@ -527,7 +527,7 @@ function calc() {
       const imgFile = NAK_IMAGES[cleanName];
       
       const safeImgPath = imgFile ? encodeURIComponent(imgFile) : '';
-      const imgHtml = imgFile ? `<img class="constellation-img" src="./images/${safeImgPath}" alt="${enName}" style="width:100%;max-height:130px;object-fit:cover;border-radius:6px;margin-top:10px;">` : '';
+      const imgHtml = imgFile ? `<img class="constellation-img" src="${safeImgPath}" alt="${enName}" style="width:100%;max-height:130px;object-fit:cover;border-radius:6px;margin-top:10px;">` : '';
       
       const rashi = getRashi(star);
       const sym = rashi ? rashiSymbol(rashi.rashi) : '';
